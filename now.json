@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "aerochallenge",
+  "builds": [{ "src": "package.json", "use": "@now/static-build" }],
+  "routes": [
+    { "src": "^/js/(.*)", "dest": "/js/$1" },
+    { "src": "^/css/(.*)", "dest": "/css/$1" },
+    { "src": "^/img/(.*)", "dest": "/img/$1" },
+    { "src": "^/resources/(.*)", "dest": "/public/resources/$1" },
+    { "src": "^/manifest.json", "dest": "/public/manifest.json" },
+    { "src": ".*", "dest": "/index.html" }
+  ]
+}
